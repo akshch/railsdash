@@ -23,9 +23,25 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body>
-    <main class="container mx-auto mt-28 px-5 flex">
-      <%= yield %>
-    </main>
+  <body class="flex h-screen">
+    <aside class="hidden lg:flex flex-col justify-between bg-slate-200">
+      <div>
+        Sidebar top
+      </div>
+      <div>
+        Sidebar bottom
+      </div>
+    </aside>
+    <div class="flex-grow overflow-y-auto">
+      <header class="sticky top-0 bg-pink-400">
+        Header content
+      </header>
+      <main>
+        <%= yield %>
+      </main>
+      <footer class="block lg:hidden sticky bottom-0 bg-pink-400">
+        Footer content
+      </footer>
+     </div>
   </body>
 </html>
