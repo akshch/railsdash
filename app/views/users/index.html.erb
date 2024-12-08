@@ -1,2 +1,37 @@
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="flex grid gap-20 grid-flow-row">
+  <div>
+    <section class="">
+      <h1>Users#index</h1>
+      <% form_with do |form| %>
+      Form contents
+      <% end %>
+    </section>
+  </div>
+
+  <div class="flex mx-12">
+    <table class="w-full  table-auto border-collapse border border-slate-400">
+      <thead class="size-16">
+        <tr class="">
+          <th class="border border-slate-400" scope="col">Id</th>
+          <th class="border border-slate-400" scope="col">First Name</th>
+          <th class="border border-slate-400" scope="col">Last Name</th>
+          <th class="border border-slate-400" scope="col">Email</th>
+          <th class="border border-slate-400" scope="col">Mobile Number</th>
+          <th class="border border-slate-400" scope="col">Gender</th>
+        </tr>
+      </thead>
+      <tbody class="text-center">
+        <% @users.each do |user | %>
+          <tr class="size-16">
+            <td class="border border-slate-400 " scope="row"><%= user.id %></td>
+            <td class="border border-slate-400"><%= user.first_name %></td>
+            <td class="border border-slate-400"><%= user.last_name %></td>
+            <td class="border border-slate-400"><%= user.email %></td>
+            <td class="border border-slate-400"><%= user.mobile_number %></td>
+            <td class="border border-slate-400"><%= user.gender %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
