@@ -7,3 +7,12 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+10.times do
+  User.create(
+    first_name: Faker::Name.first_name,
+    last_name: "Last#{User.count}",
+    email: "Test#{User.count}"+"@gmail.com",
+    gender: rand(0..1),
+    mobile_number: Faker::PhoneNumber.subscriber_number(length: 10)
+  )
+end
