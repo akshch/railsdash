@@ -33,8 +33,13 @@
       </div>
     </aside>
     <div class="flex-grow overflow-y-auto">
-      <header class="sticky top-0 bg-pink-400 pt-28">
-        Header content
+      <header class="sticky top-0 bg-pink-400">
+        <nav>
+          <ul class="block">
+            <li class="inline-block p-6 rounded-lg text-center text-lg hover:bg-pink-300"><%= link_to 'Home', users_path %></li>
+            <li class="inline-block p-6 rounded-lg text-center text-lg hover:bg-pink-300"><%= link_to 'Users', users_path %></li>
+          </ul>
+        </nav>
       </header>
       <main>
         <%= yield %>
