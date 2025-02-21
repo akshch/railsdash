@@ -10,7 +10,7 @@
       </div>
       <div class="space-x-2">
         <%= form.label :Gender, 'Gender' %>
-        <%= form.select :gender, ['Male', 'Female'], prompt: 'Selcect Gender' %>
+        <%= form.select :gender, [['Male', 'male'], ['Female', 'female']], prompt: 'Selcect Gender' %>
       </div>
       <div class="space-x-2">
         <%= form.label :start_date %>
@@ -52,3 +52,10 @@
     </table>
   </div>
 </div>
+Step 1
+Search by name or email
+Select tag filter gender
+Date filter start to end
+Export to CSV
+Pagination
+<p>Find me in app/views/users/index.html.erb</p>
